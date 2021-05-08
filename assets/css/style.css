@@ -1,5 +1,3 @@
-/* COMMENT */
-
 html {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -137,7 +135,7 @@ html {
     font-size: 34px;
   }
   
-  .weather, .journal-entry, .pixabay-images, .projects {
+  .weather, .journal-entry, .pixabay-images {
     text-align: center;
   }
   
@@ -147,10 +145,11 @@ html {
     margin-right: 10px;
   }
   
-  .content-left, .content-right {
+
+  .content-left, .content-left-weather, .content-right {
     background-color: rgba(255, 255, 255, .15);  
     backdrop-filter: blur(5px);
-    padding: 75px;
+    padding: 50px;
     border-radius: 12px;
   }
   
@@ -166,3 +165,9 @@ html {
     }
   }
   
+  @media (min-width: 900px) {
+    .content-left {
+      grid-column: 1 / 3;
+      grid-template-columns: 1fr;
+    }
+  }
